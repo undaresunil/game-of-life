@@ -1,4 +1,4 @@
-node('JDK8) {
+node('JDK8') {
 	stage('SourceCode') {
 		//get the code from git repo
 		git branch: 'sunil24', url: 'https://github.com/undaresunil/game-of-life.git'
