@@ -10,7 +10,7 @@ pipeline {
 			steps {
 				sh 'mvn clean package'
 			}		
-		stege('Archiving and Test Result'){
+		stage('Archiving and Test Result'){
 			steps {
 				junit stdioRetention: '', testResults: '**/surefire-reports/*.xml'
 				archiveArtifacts artifacts: '**/*.war', followSymlinks: false
