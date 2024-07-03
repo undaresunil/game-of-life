@@ -1,5 +1,11 @@
 pipeline {
         agent { label 'JDK8' }
+
+	environment {
+        	MVN_3.6.3 = 'true'
+        	MAVEN_HOME = '/opt/apache-maven-3.6.3'
+    	}
+
         stages {
                 stage('SourceCode') {
                         steps {
