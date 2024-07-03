@@ -14,7 +14,7 @@ pipeline {
                 }
                 stage('Build the code') {
 			steps {
-				sh 'mvn clean package'
+				sh '/opt/apache-maven-3.6.3/bin mvn clean package'
 			}		
 		}
 		stage('Archiving and Test Result'){
