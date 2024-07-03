@@ -10,6 +10,7 @@ pipeline {
 			steps {
 				sh 'mvn clean package'
 			}		
+		}
 		stage('Archiving and Test Result'){
 			steps {
 				junit stdioRetention: '', testResults: '**/surefire-reports/*.xml'
@@ -17,9 +18,6 @@ pipeline {
 			}
 		}
 		}
-
-
-        }
 
 }
 	
